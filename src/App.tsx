@@ -32,7 +32,7 @@ const App: React.FC = () => {
       {/* Sidebar Indicator Wrapper */}
       <div className="flex">
         <aside className="hidden lg:flex w-24 border-r border-white/10 flex-col items-center justify-between py-32 fixed left-0 h-screen z-40 bg-brand-bg">
-          <span className="vertical-text rotate-180 text-[10px] uppercase tracking-[0.5em] opacity-40">Clinical Archive 08</span>
+          <span className="vertical-text rotate-180 text-[10px] uppercase tracking-[0.5em] opacity-40">Every Tooth Counts</span>
           <div className="w-px h-24 bg-brand-accent/30" />
           <span className="text-brand-accent font-serif italic text-lg">{activeTab === 'home' ? '01' : activeTab === 'services' ? '02' : '03'}</span>
         </aside>
@@ -50,6 +50,23 @@ const App: React.FC = () => {
             </motion.div>
           </AnimatePresence>
         </main>
+      </div>
+
+      {/* Floating WhatsApp Button */}
+      <div className="fixed bottom-8 right-8 z-[60]">
+        <motion.a 
+          href="https://wa.me/917550089819?text=Hello%20Dr.%20Mohana%E2%80%99s%20Dental%20Care,%20I%20would%20like%20to%20book%20an%20appointment%20or%20schedule%20a%20meeting."
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:shadow-[0_0_30px_rgba(37,211,102,0.5)] transition-all"
+          aria-label="Chat on WhatsApp"
+        >
+          <svg viewBox="0 0 24 24" className="w-8 h-8 fill-white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+        </motion.a>
       </div>
 
       <Footer />
@@ -83,10 +100,10 @@ const HomeView: React.FC<{ setActiveTab: (tab: string) => void }> = ({ setActive
                   animate={{ opacity: 0.6, letterSpacing: '1em' }}
                   className="text-[10px] uppercase tracking-[1em] mb-8"
                 >
-                  Clinical Study
+                  Expert Care
                 </motion.p>
                 <h2 className="text-5xl md:text-7xl lg:text-8xl font-serif leading-tight text-white tracking-widest">
-                  The <span className="italic">Obsidian</span><br />Archetype
+                  Dr. Mohana’s<br />Dental Care
                 </h2>
               </div>
             </div>
@@ -96,12 +113,12 @@ const HomeView: React.FC<{ setActiveTab: (tab: string) => void }> = ({ setActive
           <div className="w-full lg:w-80 flex flex-col justify-between py-4">
             <div className="space-y-12">
               <section>
-                <h3 className="text-[10px] uppercase tracking-[0.3em] text-brand-accent mb-6 font-bold">Studio Specs</h3>
+                <h3 className="text-[10px] uppercase tracking-[0.3em] text-brand-accent mb-6 font-bold">Doctor Specs</h3>
                 <div className="space-y-4">
                   {[
-                    ['Clinical Tier', 'Ultra-Aesthetic'],
-                    ['Protocol', 'Digital Archive'],
-                    ['Materials', 'Bio-Resonance']
+                    ['Specialist', 'Dr. D. Mohanalakshmi'],
+                    ['Specialty', 'Prosthodontist'],
+                    ['Experience', 'Complete Implantology']
                   ].map(([label, val]) => (
                     <div key={label} className="flex justify-between border-b border-white/10 pb-2">
                       <span className="text-[10px] uppercase tracking-widest opacity-40">{label}</span>
@@ -112,20 +129,28 @@ const HomeView: React.FC<{ setActiveTab: (tab: string) => void }> = ({ setActive
               </section>
 
               <section>
-                <h3 className="text-[10px] uppercase tracking-[0.3em] text-brand-accent mb-4 font-bold">Narrative</h3>
+                <h3 className="text-[10px] uppercase tracking-[0.3em] text-brand-accent mb-4 font-bold">Vision</h3>
                 <p className="text-sm leading-relaxed opacity-60 font-light italic">
-                  An exploration of structural perfection and organic light within the clinical landscape. Designed to vanish the anxiety of procedure while maintaining a monolithic excellence.
+                  Prosthodontist and Implantologist offering complete dental care for families and individuals in Adyar, Chennai. Dedicated to excellence in restorative and preventative care.
                 </p>
               </section>
             </div>
 
-            <div className="mt-auto pt-12">
+            <div className="mt-6 flex flex-col gap-4">
               <button 
                 onClick={() => setActiveTab('booking')}
-                className="w-full py-5 border border-brand-accent text-brand-accent text-[10px] uppercase tracking-[0.4em] hover:bg-brand-accent hover:text-brand-bg transition-all duration-700"
+                className="w-full py-5 bg-brand-accent text-brand-bg text-[10px] uppercase tracking-[0.4em] font-bold hover:shadow-[0_0_30px_rgba(197,164,126,0.3)] transition-all duration-500"
               >
-                Inquire Entry
+                Book Appointment
               </button>
+              <a 
+                href="https://www.google.com/maps/place/Dr.Mohana's+Dental+Care/@13.0048895,80.2624255,17z/data=!4m6!3m5!1s0x3a52677dabb1886b:0x41b6bf12fd236233!8m2!3d13.0048895!4d80.2624255!16s%2Fg%2F11xytb2w3p?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-5 border border-brand-accent text-brand-accent text-[10px] uppercase tracking-[0.4em] text-center hover:bg-brand-accent hover:text-brand-bg transition-all duration-700"
+              >
+                Get Directions
+              </a>
             </div>
           </div>
         </div>
@@ -137,17 +162,17 @@ const HomeView: React.FC<{ setActiveTab: (tab: string) => void }> = ({ setActive
           <div className="md:col-span-8 glass-panel p-12 flex flex-col justify-end space-y-12 min-h-[500px] border-white/10">
             <div className="w-16 h-px bg-brand-accent/50" />
             <h3 className="text-5xl font-serif text-white tracking-[0.1em] leading-tight italic">
-              A Monolithic <br /><span className="not-italic opacity-40">Intersection.</span>
+              Advanced <br /><span className="not-italic opacity-40">Prosthodontics.</span>
             </h3>
             <p className="text-brand-text/50 text-lg leading-relaxed max-w-xl font-light">
-              We believe architectural precision is the soul of health. Our studio utilizes deep-field imaging to ensure your transformation is as structural as it is aesthetic.
+              Dr. Mohana’s Dental Care provides complete dental treatments with a patient-friendly approach, focused on quality care, comfort, and long-term oral health.
             </p>
           </div>
 
           <div className="md:col-span-4 space-y-8 flex flex-col">
             {[
-              { title: 'Clinical Rigor', icon: <ShieldCheck size={28} />, desc: 'Verification of clinical integrity through high-resonance diagnostics.' },
-              { title: 'Elite Comfort', icon: <Star size={28} />, desc: 'Personalized acoustic isolation for an unparalleled meditative baseline.' }
+              { title: 'Quality Care', icon: <ShieldCheck size={28} />, desc: 'Focused on long-term oral health through precise clinical diagnostics.' },
+              { title: 'Patient Friendly', icon: <Star size={28} />, desc: 'Comfort-first approach to ensure a stress-free dental experience.' }
             ].map((item, i) => (
               <div key={i} className="flex-1 glass-panel p-10 space-y-6 border-white/10 group hover:border-brand-accent/30 transition-colors">
                 <div className="text-brand-accent opacity-50 group-hover:opacity-100 transition-opacity">{item.icon}</div>
@@ -164,18 +189,18 @@ const HomeView: React.FC<{ setActiveTab: (tab: string) => void }> = ({ setActive
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div className="space-y-12 relative z-10">
             <h2 className="text-5xl md:text-7xl font-serif text-white tracking-tight italic">
-              Structural <br />
-              <span className="not-italic text-brand-accent uppercase tracking-widest text-4xl md:text-5xl opacity-40">Reveal.</span>
+              Aesthetic <br />
+              <span className="not-italic text-brand-accent uppercase tracking-widest text-4xl md:text-5xl opacity-40">Shifts.</span>
             </h2>
             <div className="space-y-8">
               <p className="text-brand-text/50 text-lg leading-relaxed max-w-md">
-                Observe the precision of our structural shifts. Transition between clinical reality and architectural finale.
+                Witness the power of precision-engineered restorative dentistry at Dr. Mohana’s Dental Care.
               </p>
               <div className="space-y-4">
                 {[
-                  "Spectral Reconstruction",
-                  "Obsidian-Tonne Shades",
-                  "Gingival Silhouette"
+                  "Digital Smile Design",
+                  "Implant Realignment",
+                  "Restorative Excellence"
                 ].map((feature, i) => (
                   <div key={i} className="flex items-center gap-4 text-brand-text/80">
                     <div className="w-8 h-px bg-brand-accent/40" />
@@ -187,7 +212,7 @@ const HomeView: React.FC<{ setActiveTab: (tab: string) => void }> = ({ setActive
                 onClick={() => setActiveTab('testimonials')}
                 className="group flex items-center gap-6 text-brand-accent text-[10px] uppercase tracking-[0.5em] pt-8 border-b border-brand-accent/20 pb-2 hover:border-brand-accent transition-all"
               >
-                Archive Library 02
+                View Transformations
                 <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
               </button>
             </div>
@@ -225,52 +250,70 @@ const HomeView: React.FC<{ setActiveTab: (tab: string) => void }> = ({ setActive
 const ServicesView: React.FC<{ setActiveTab: (tab: string) => void }> = ({ setActiveTab }) => {
   const services = [
     {
-      title: "Cosmetic Artistry",
-      desc: "Veneers, Bonding, and Sculpting designed to disappear into your natural beauty.",
+      title: "Root Canal Treatment",
+      desc: "Advanced endodontic care to save natural teeth and relieve pain with precision.",
       icon: <Sparkles size={24} />,
-      image: "https://images.unsplash.com/photo-1447069387593-a5de0862481e?q=80&w=2069&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1606811841660-1b5168c5c705?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      title: "Restorative Masters",
-      desc: "Implants and crowns that restore not just function, but the soul of your smile.",
+      title: "Implantology",
+      desc: "State-of-the-art dental implants providing terminal stability and natural resonance.",
       icon: <ShieldCheck size={24} />,
-      image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=2069&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      title: "Preventative Suite",
-      desc: "Advanced clinical diagnostics ensuring longevity and impeccable oral health.",
+      title: "Orthodontic Braces",
+      desc: "Traditional and modern alignment solutions for perfect structural harmony.",
       icon: <Star size={24} />,
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+      title: "Crown and Bridge",
+      desc: "Bespoke prosthetics designed to restore function and anatomical integrity.",
+      icon: <ShieldCheck size={24} />,
+      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+      title: "Invisible Aligners",
+      desc: "Clear aligner protocols for discreet orthodontic correction.",
+      icon: <Sparkles size={24} />,
+      image: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+      title: "Child Dentistry",
+      desc: "Empathic pediatric care focused on early preventative foundations.",
+      icon: <Star size={24} />,
+      image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop"
     }
   ];
 
   return (
     <div className="pt-40 space-y-32 mb-40">
       <div className="text-center space-y-6 px-6 max-w-4xl mx-auto">
-        <h2 className="text-5xl md:text-7xl font-serif text-white tracking-[0.2em] italic">The <span className="not-italic text-brand-accent">Exhibitions.</span></h2>
-        <p className="text-brand-text/30 text-[10px] tracking-[0.5em] uppercase">Structural Procedures • Clinical Archive</p>
+        <h2 className="text-5xl md:text-7xl font-serif text-white tracking-[0.2em] italic">The <span className="not-italic text-brand-accent">Procedures.</span></h2>
+        <p className="text-brand-text/30 text-[10px] tracking-[0.5em] uppercase">Clinical Care • Expert Dental Solutions</p>
         <div className="w-px h-12 bg-brand-accent/20 mx-auto mt-8" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         {services.map((service, i) => (
           <motion.div 
             key={i}
             whileHover={{ y: -10 }}
-            className="group relative h-[650px] overflow-hidden border border-white/10 flex flex-col justify-end p-10 space-y-6 bg-white/5"
+            className="group relative h-[550px] overflow-hidden border border-white/10 flex flex-col justify-end p-10 space-y-6 bg-white/5"
           >
             <div className="absolute inset-x-0 bottom-0 top-1/4 bg-gradient-to-t from-brand-bg via-brand-bg/80 to-transparent z-10" />
             <img src={service.image} className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-40 group-hover:scale-110 transition-all duration-1000" alt={service.title} />
             
             <div className="relative z-20 space-y-6">
-              <div className="text-brand-accent text-[10px] uppercase tracking-[0.4em] opacity-60">Phase 0{i + 1}</div>
-              <h3 className="text-3xl font-serif text-white italic tracking-wide">{service.title}</h3>
+              <div className="text-brand-accent text-[10px] uppercase tracking-[0.4em] opacity-60">Service 0{i + 1}</div>
+              <h3 className="text-2xl font-serif text-white italic tracking-wide">{service.title}</h3>
               <p className="text-brand-text/50 text-[11px] leading-relaxed uppercase tracking-wider">{service.desc}</p>
               <button 
                 onClick={() => setActiveTab('booking')}
                 className="pt-4 flex items-center gap-4 text-brand-accent text-[10px] uppercase tracking-[0.3em] font-bold group-hover:gap-6 transition-all"
               >
-                Inquire Study <ArrowRight size={14} />
+                Book Appointment <ArrowRight size={14} />
               </button>
             </div>
             
@@ -278,6 +321,23 @@ const ServicesView: React.FC<{ setActiveTab: (tab: string) => void }> = ({ setAc
             <div className="absolute top-6 right-6 w-8 h-8 border-t border-r border-brand-accent/20 group-hover:border-brand-accent transition-colors" />
           </motion.div>
         ))}
+      </div>
+
+      {/* Additional Services List */}
+      <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
+          <p className="text-brand-text/40 text-[10px] uppercase tracking-[0.3em]">And all other General Dental Procedures including</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                "Wisdom Tooth Extraction",
+                "Fixed Dentures",
+                "Cosmetic Dentistry",
+                "Removable Dentures"
+              ].map((item, i) => (
+                <div key={i} className="text-[10px] uppercase tracking-[0.2em] text-white/60 border border-white/5 py-4 px-2">
+                    {item}
+                </div>
+              ))}
+          </div>
       </div>
     </div>
   );
@@ -288,8 +348,8 @@ const TransformationsView: React.FC = () => {
     {
       id: "STUDY 0492",
       title: "Full Arch Reconstruction",
-      author: "Alexander V. Moretti",
-      quote: "The structural baseline I encountered here is unparalleled. It wasn't just about the aesthetics; it was about the restoration of my character through clinical mastery.",
+      author: "Alexander M.",
+      quote: "The structural baseline I encountered here is unparalleled. It wasn't just about the aesthetics; it was about the restoration of my smile through clinical mastery.",
       desc: "Complete structural realignment using bio-compatible zirconia and anatomical porcelain layering.",
       before: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop",
       after: "https://images.unsplash.com/photo-1544605934-802c31cc2054?q=80&w=2070&auto=format&fit=crop",
@@ -302,13 +362,13 @@ const TransformationsView: React.FC = () => {
     {
       id: "STUDY 0215",
       title: "Veneer Silhouette",
-      author: "Eleanor St. James",
-      quote: "I wanted a change that felt like it had always been there. Dr. Thorne achieved a natural resonance that most practitioners simply cannot see.",
+      author: "Eleanor S.",
+      quote: "I wanted a change that felt like it had always been there. Dr. Mohanalakshmi achieved a natural resonance that most practitioners simply cannot see.",
       desc: "Minimal-prep ceramic interfaces designed to match existing gingival architecture.",
       before: "https://images.unsplash.com/photo-1606811841660-1b5168c5c705?q=80&w=2070&auto=format&fit=crop",
       after: "https://images.unsplash.com/photo-1593059025398-4f144a170a55?q=80&w=2070&auto=format&fit=crop",
       specs: [
-        ["Procedure", "Lumina-Edge Veneers"],
+        ["Procedure", "Aesthetic Veneers"],
         ["Timeline", "4 Weeks"],
         ["Outcome", "Natural Resonance"]
       ]
@@ -316,7 +376,7 @@ const TransformationsView: React.FC = () => {
     {
       id: "STUDY 0884",
       title: "Digital Smile Design",
-      author: "Marcus Thorne-Blackwood",
+      author: "Marcus B.",
       quote: "The digital blueprinting phase gave me total confidence in the structural stability of the end result. A masterpiece of engineering.",
       desc: "Comprehensive virtual mapping translated into physical ceramic reality.",
       before: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=2070&auto=format&fit=crop",
@@ -453,8 +513,11 @@ const AboutView: React.FC = () => {
   return (
     <div className="pt-40 space-y-32 mb-40">
       <div className="text-center space-y-6 px-6 max-w-4xl mx-auto">
-        <h2 className="text-5xl md:text-7xl font-serif text-white tracking-[0.1em] uppercase">The <span className="italic font-normal text-brand-accent">Artisan.</span></h2>
-        <p className="text-brand-text/30 text-[10px] tracking-[0.6em] uppercase">Lead Clinician • Artistic Visionary</p>
+        <h2 className="text-5xl md:text-7xl font-serif text-white tracking-[0.1em] uppercase">The <span className="italic font-normal text-brand-accent">Specialist.</span></h2>
+        <div className="space-y-4">
+          <p className="text-white text-2xl md:text-4xl tracking-[0.25em] font-medium uppercase font-serif">Dr. D. Mohanalakshmi M.D.S</p>
+          <p className="text-brand-accent/70 text-[11px] md:text-sm tracking-[0.3em] uppercase font-light">Founder & Chief Dental Specialist · Prosthodontist & Implantologist</p>
+        </div>
         <div className="w-px h-12 bg-brand-accent/20 mx-auto mt-8" />
       </div>
 
@@ -465,28 +528,28 @@ const AboutView: React.FC = () => {
             <img 
               src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop" 
               className="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-1000"
-              alt="Dr. Julian Thorne"
+              alt="Dr. D. Mohanalakshmi"
             />
             <div className="absolute inset-0 bg-brand-bg/20 backdrop-blur-[1px]" />
-            <div className="absolute bottom-8 right-8 vertical-text text-[10px] uppercase tracking-[0.5em] text-brand-accent opacity-40">Dr. Julian Thorne, PhD</div>
+            <div className="absolute bottom-8 right-8 vertical-text text-[10px] uppercase tracking-[0.5em] text-brand-accent opacity-40">Prosthodontist & Implantologist</div>
           </div>
 
           <div className="space-y-12">
             <div className="w-16 h-px bg-brand-accent/40" />
             <h3 className="text-5xl font-serif text-white italic tracking-wide leading-tight">
-              A Life Dedicated <br /><span className="not-italic opacity-40">to Clinical Mastery.</span>
+              A Dedication <br /><span className="not-italic opacity-40">to Restorative Care.</span>
             </h3>
             <p className="text-brand-text/50 text-lg leading-relaxed font-light">
-              Dr. Julian Thorne established Lumina Archive with a singular purpose: to bridge the chasm between clinical medicine and high art. With over two decades of experience in complex restorative cases, his approach is defined by a relentless pursuit of anatomical truth and visual harmony.
+              Dr. D. Mohanalakshmi M.D.S is the Founder and Chief Dental Specialist at Dr. Mohana's Dental Care, Adyar — a practice she built to bring compassionate, high-quality dentistry to Chennai. A specialist in Prosthodontics and Implantology, she personally oversees and performs every treatment at the clinic, supported by a team of experienced associate consultants. With a philosophy that every tooth counts, Dr. Mohanalakshmi ensures each patient receives precise, comfortable, and lasting dental care. Step into her clinic and discover dentistry that truly puts your smile first.
             </p>
-            <div className="grid grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
                 <h4 className="text-brand-accent uppercase tracking-[0.3em] text-[10px] font-bold mb-4">The Vision</h4>
-                <p className="text-brand-text/40 text-xs leading-relaxed uppercase tracking-widest italic">To redefine the clinical encounter as a sanctuary of transformation and quiet excellence.</p>
+                <p className="text-brand-text/40 text-xs leading-relaxed uppercase tracking-widest italic font-light">Every tooth counts. To provide high-quality dental care that enhances the lives of our patients in Chennai.</p>
               </div>
               <div>
                 <h4 className="text-brand-accent uppercase tracking-[0.3em] text-[10px] font-bold mb-4">The Mission</h4>
-                <p className="text-brand-text/40 text-xs leading-relaxed uppercase tracking-widest italic">Restoring dignity and character through precision-engineered smiles and empathetic care.</p>
+                <p className="text-brand-text/40 text-xs leading-relaxed uppercase tracking-widest italic font-light">Delivering expert clinical solutions with empathy, focusing on long-term sustainability and anatomical perfection.</p>
               </div>
             </div>
           </div>
@@ -497,16 +560,16 @@ const AboutView: React.FC = () => {
       <section className="bg-white/5 py-40 border-y border-white/10">
         <div className="max-w-7xl mx-auto px-6 space-y-24">
           <div className="text-center space-y-4">
-            <h4 className="text-brand-accent uppercase tracking-[0.4em] text-[10px] font-bold">The Foundation</h4>
-            <h2 className="text-4xl md:text-5xl font-serif text-white italic">Our Core Values.</h2>
+            <h4 className="text-brand-accent uppercase tracking-[0.4em] text-[10px] font-bold">The Care Standard</h4>
+            <h2 className="text-4xl md:text-5xl font-serif text-white italic">Our Foundations.</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { phase: "01", title: "Radical Integrity", desc: "Absolute transparency in clinical diagnostics and outcome expectations." },
-              { phase: "02", title: "Master Craft", desc: "Hand-finished porcelain work that rivals the complexity of natural enamel." },
-              { phase: "03", title: "Patient Evolution", desc: "Treatments designed to age with the individual, ensuring lifelong stability." },
-              { phase: "04", title: "Avant-Garde Tech", desc: "The integration of cutting-edge AI diagnostics to eliminate human margin." }
+              { phase: "01", title: "Patient First", desc: "A friendly approach ensuring comfort is at the center of every procedure." },
+              { phase: "02", title: "Expertise", desc: "Specialized care in Prosthodontics and Implantology by M.D.S qualified doctors." },
+              { phase: "03", title: "Hygiene", desc: "Rigorous clinical sterilization protocols protecting the safety of our patients." },
+              { phase: "04", title: "Innovation", desc: "Utilizing modern dental protocols and bio-compatible materials." }
             ].map((value, i) => (
               <div key={i} className="glass-panel p-8 space-y-6 border-white/5 relative group hover:border-brand-accent/20 transition-all">
                 <div className="absolute top-0 right-0 p-4 font-serif italic text-3xl opacity-10 text-brand-accent group-hover:opacity-30 transition-opacity">{value.phase}</div>
@@ -522,32 +585,28 @@ const AboutView: React.FC = () => {
       {/* Bio Information Section */}
       <section className="max-w-4xl mx-auto px-6 space-y-12">
           <div className="text-center space-y-4">
-             <h4 className="text-brand-accent uppercase tracking-[0.4em] text-[10px] font-bold">Primary Credentials</h4>
+             <h4 className="text-brand-accent uppercase tracking-[0.4em] text-[10px] font-bold">Clinical Profile</h4>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
               <div className="space-y-6">
-                  <h5 className="text-white text-xs uppercase tracking-[0.3em] font-bold border-b border-white/10 pb-4">Education</h5>
+                  <h5 className="text-white text-xs uppercase tracking-[0.3em] font-bold border-b border-white/10 pb-4">Specialization</h5>
                   <ul className="space-y-4">
                       <li className="flex justify-between items-end">
-                          <span className="text-[10px] uppercase tracking-widest opacity-40">Doctorate</span>
-                          <span className="text-[10px] uppercase tracking-widest text-brand-accent">Harvard School of Med</span>
+                          <span className="text-[10px] uppercase tracking-widest opacity-40 text-left">Primary</span>
+                          <span className="text-[10px] uppercase tracking-widest text-brand-accent text-right">Prosthodontist</span>
                       </li>
                       <li className="flex justify-between items-end">
-                          <span className="text-[10px] uppercase tracking-widest opacity-40">Mastery</span>
-                          <span className="text-[10px] uppercase tracking-widest text-brand-accent">European Aesthetic Acad</span>
+                          <span className="text-[10px] uppercase tracking-widest opacity-40 text-left">Advanced</span>
+                          <span className="text-[10px] uppercase tracking-widest text-brand-accent text-right">Implantologist</span>
                       </li>
                   </ul>
               </div>
               <div className="space-y-6">
-                  <h5 className="text-white text-xs uppercase tracking-[0.3em] font-bold border-b border-white/10 pb-4">Awards</h5>
+                  <h5 className="text-white text-xs uppercase tracking-[0.3em] font-bold border-b border-white/10 pb-4">Qualifications</h5>
                   <ul className="space-y-4">
                       <li className="flex justify-between items-end">
-                          <span className="text-[10px] uppercase tracking-widest opacity-40">2023</span>
-                          <span className="text-[10px] uppercase tracking-widest text-brand-accent">Clinical Excellence Gold</span>
-                      </li>
-                      <li className="flex justify-between items-end">
-                          <span className="text-[10px] uppercase tracking-widest opacity-40">2021</span>
-                          <span className="text-[10px] uppercase tracking-widest text-brand-accent">Innovation in Prosthetics</span>
+                          <span className="text-[10px] uppercase tracking-widest opacity-40 text-left">Specialist</span>
+                          <span className="text-[10px] uppercase tracking-widest text-brand-accent text-right">Dr. D. Mohanalakshmi M.D.S</span>
                       </li>
                   </ul>
               </div>
@@ -561,41 +620,84 @@ const BookingView: React.FC = () => {
   return (
     <div className="pt-40 pb-40 max-w-4xl mx-auto px-6 space-y-24">
       <div className="text-center space-y-6">
-        <h2 className="text-5xl md:text-7xl font-serif text-white tracking-[0.1em] uppercase">Entry <span className="italic font-normal text-brand-accent">Inquiry.</span></h2>
-        <p className="text-brand-text/30 text-[10px] tracking-[0.6em] uppercase">Volume VIII • Limited Clinical Selection</p>
+        <h2 className="text-5xl md:text-7xl font-serif text-white tracking-[0.1em] uppercase">Connect <span className="italic font-normal text-brand-accent">with us.</span></h2>
+        <p className="text-brand-text/30 text-[10px] tracking-[0.6em] uppercase">Consulting Hours: 10AM - 1PM | 5:30PM - 8:30PM</p>
         <div className="w-16 h-px bg-brand-accent/30 mx-auto mt-8" />
       </div>
 
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
+          <div className="glass-panel p-10 space-y-6 border-white/10">
+              <h4 className="text-brand-accent uppercase tracking-[0.4em] text-[10px] font-bold">Contact Details</h4>
+              <div className="space-y-4 text-white/80 text-sm tracking-widest">
+                  <p className="flex items-center gap-4">
+                      <span className="opacity-40">Phone:</span>
+                      <a href="tel:9003227250" className="hover:text-brand-accent">9003227250</a>
+                  </p>
+                  <p className="flex items-center gap-4">
+                      <span className="opacity-40">WhatsApp:</span>
+                      <a href="tel:7550089819" className="hover:text-brand-accent">7550089819</a>
+                  </p>
+                  <p className="flex items-center gap-4">
+                      <span className="opacity-40">Email:</span>
+                      <a href="mailto:drmohanasdentalcare@gmail.com" className="hover:text-brand-accent lowercase transition-colors">drmohanasdentalcare@gmail.com</a>
+                  </p>
+                  <p className="flex items-center gap-4">
+                      <span className="opacity-40">Instagram:</span>
+                      <span className="hover:text-brand-accent">dr.mohanadentalcare</span>
+                  </p>
+              </div>
+          </div>
+          <div className="glass-panel p-10 space-y-6 border-white/10">
+              <h4 className="text-brand-accent uppercase tracking-[0.4em] text-[10px] font-bold">Clinic Address</h4>
+              <div className="text-white/80 text-sm tracking-widest leading-relaxed">
+                  <p>No: 41/5, Karpagam Gardens,</p>
+                  <p>1st Main Road, Adyar,</p>
+                  <p>Chennai - 20</p>
+              </div>
+              <a 
+                href="https://www.google.com/maps/place/Dr.Mohana's+Dental+Care/@13.0048895,80.2624255,17z/data=!4m6!3m5!1s0x3a52677dabb1886b:0x41b6bf12fd236233!8m2!3d13.0048895!4d80.2624255!16s%2Fg%2F11xytb2w3p?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-4 text-brand-accent text-[10px] uppercase tracking-[0.3em] font-bold pt-4 hover:gap-6 transition-all"
+              >
+                Open Google Maps <ArrowRight size={14} />
+              </a>
+          </div>
+      </div>
+
       <form className="p-8 md:p-16 space-y-12 border border-white/10 bg-white/5 relative group">
-        <div className="absolute -inset-4 border border-brand-accent/5 pointer-events-none group-focus-within:border-brand-accent/20 transition-all" />
+        <div className="absolute -inset-4 border border-brand-accent/5 pointer-events-none group-focus-within:border-brand-accent/20 transition-all font-bold" />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-4">
-            <label className="text-[10px] uppercase tracking-[0.4em] text-brand-accent/60 pl-1 font-bold">Identifer</label>
-            <input type="text" className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors px-1 text-sm tracking-widest" placeholder="NAME / ORIGIN" />
+            <label className="text-[10px] uppercase tracking-[0.4em] text-brand-accent/60 pl-1 font-bold">Identifier</label>
+            <input type="text" className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors px-1 text-sm tracking-widest" placeholder="YOUR NAME" />
           </div>
           <div className="space-y-4">
             <label className="text-[10px] uppercase tracking-[0.4em] text-brand-accent/60 pl-1 font-bold">Liaison</label>
-            <input type="email" className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors px-1 text-sm tracking-widest" placeholder="EMAIL@PROTOCOL.COM" />
+            <input type="email" className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors px-1 text-sm tracking-widest" placeholder="EMAIL ADDRESS" />
           </div>
         </div>
 
         <div className="space-y-4">
-          <label className="text-[10px] uppercase tracking-[0.4em] text-brand-accent/60 pl-1 font-bold">Inquiry Depth</label>
+          <label className="text-[10px] uppercase tracking-[0.4em] text-brand-accent/60 pl-1 font-bold">Required Procedure</label>
           <select className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors appearance-none px-1 text-sm tracking-widest cursor-pointer">
-            <option>STRUCTURAL RECONSTRUCTION</option>
-            <option>MAINTENANCE PROTOCOL</option>
-            <option>PREVENTATIVE ARCHIVE</option>
+            <option>ROOT CANAL TREATMENT</option>
+            <option>DENTAL IMPLANTS</option>
+            <option>ORTHODONTIC BRACES</option>
+            <option>CROWN AND BRIDGE</option>
+            <option>INVISIBLE ALIGNERS</option>
+            <option>COSMETIC DENTISTRY</option>
           </select>
         </div>
 
         <div className="space-y-4">
-          <label className="text-[10px] uppercase tracking-[0.4em] text-brand-accent/60 pl-1 font-bold">Personal Narrative</label>
-          <textarea rows={4} className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors px-1 resize-none text-sm tracking-widest" placeholder="DEFINE EXPECTATION..."></textarea>
+          <label className="text-[10px] uppercase tracking-[0.4em] text-brand-accent/60 pl-1 font-bold">Context</label>
+          <textarea rows={4} className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors px-1 resize-none text-sm tracking-widest" placeholder="BRIEF DESCRIPTION OF YOUR NEEDS..."></textarea>
         </div>
 
         <button className="w-full py-6 border border-brand-accent text-brand-accent font-bold uppercase tracking-[0.6em] text-[10px] hover:bg-brand-accent hover:text-brand-bg transition-all duration-700 shadow-[0_0_40px_rgba(197,164,126,0.1)]">
-          Submit for Review
+          Submit Appointment Request
         </button>
       </form>
     </div>

@@ -47,8 +47,8 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
 
         {/* Labels */}
         <div className="absolute inset-x-6 top-6 flex justify-between pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <span className="px-3 py-1 bg-brand-bg/80 text-[8px] uppercase tracking-[0.2em] text-white border border-white/10">Start Study</span>
-          <span className="px-3 py-1 bg-brand-accent text-[8px] uppercase tracking-[0.2em] text-brand-bg font-bold">Protocol Finale</span>
+          <span className="px-3 py-1 bg-brand-bg/80 text-[8px] uppercase tracking-[0.2em] text-white border border-white/10">Clinical Reality</span>
+          <span className="px-3 py-1 bg-brand-accent text-[8px] uppercase tracking-[0.2em] text-brand-bg font-bold">Structural Finale</span>
         </div>
 
         {/* Slider Controls */}

@@ -36,11 +36,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
           onClick={() => setActiveTab('home')}
         >
           <div className="w-10 h-10 rounded-full border border-brand-accent/30 flex items-center justify-center group-hover:border-brand-accent/60 transition-colors">
-            <span className="font-serif text-brand-accent text-xl italic">L</span>
+            <span className="font-serif text-brand-accent text-xl italic">M</span>
           </div>
           <div>
-            <h1 className="font-serif text-xl tracking-[0.3em] text-white">LUMINA</h1>
-            <p className="text-[10px] tracking-[0.4em] text-brand-accent/60 uppercase -mt-1">Dental Artistry</p>
+            <h1 className="font-serif text-xl tracking-[0.3em] text-white">DR. MOHANA'S</h1>
+            <p className="text-[10px] tracking-[0.4em] text-brand-accent/60 uppercase -mt-1">DENTAL CARE</p>
           </div>
         </div>
 
@@ -66,15 +66,15 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
         </div>
 
         <div className="hidden md:flex items-center gap-8">
-          <a href="tel:+1234567890" className="flex items-center gap-2 text-white/50 hover:text-white transition-colors">
+          <a href="tel:9003227250" className="flex items-center gap-2 text-white/50 hover:text-white transition-colors">
             <Phone size={14} className="text-brand-accent" />
-            <span className="text-[10px] tracking-[0.2em] uppercase">Connect</span>
+            <span className="text-[10px] tracking-[0.2em] uppercase">9003227250</span>
           </a>
           <button 
             onClick={() => setActiveTab('booking')}
             className="px-6 py-2 rounded-full border border-brand-accent/20 bg-brand-accent/5 text-brand-accent text-[10px] uppercase tracking-[0.2em] hover:bg-brand-accent hover:text-brand-bg transition-all duration-500"
           >
-            Entry
+            Book Appointment
           </button>
         </div>
 
@@ -116,7 +116,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                   }}
                   className="w-full py-4 rounded-xl bg-brand-accent text-brand-bg font-medium uppercase tracking-widest text-sm"
                 >
-                  Book Consultation
+                  Book Appointment
                 </button>
               </div>
             </div>
