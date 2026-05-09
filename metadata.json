@@ -1,0 +1,12 @@
+{
+  "name": "Lumina Dental - The Art of Precision",
+  "description": "An elite dental experience merging clinical excellence with luxury hospitality.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "Bespoke Treatment Booking",
+    "Interactive Smile Transformations",
+    "Clinical Case Gallery"
+  ]
+}
