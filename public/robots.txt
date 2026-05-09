@@ -10,4 +10,8 @@ Allow: /
 User-agent: Twitterbot
 Allow: /
 
-Sitemap: https://drmohanasdentalcare.vercel.app/sitemap.xml
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Slackbot
+Allow: /
