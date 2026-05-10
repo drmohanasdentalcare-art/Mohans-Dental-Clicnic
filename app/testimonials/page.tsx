@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { reviews, GOOGLE_MAPS_URL } from '../data/reviews';
 import styles from './testimonials.module.css';
 import BookCTA from '../components/BookCTA';
@@ -37,6 +38,16 @@ export default function TestimonialsPage() {
               <div className="section-label"><span>Testimonials</span></div>
               <h2 className="section-title">What Our <em>Patients Say</em></h2>
               <p className={styles.reviewCount}>{reviews.length} verified Google reviews · ⭐ 4.9/5 rating</p>
+            </div>
+          </Reveal>
+          <Reveal>
+            <div className={styles.patientGallery}>
+              <div className={styles.patientImage}>
+                <Image src="/asset/patientshandling1.png" alt="Happy patient getting treatment" fill />
+              </div>
+              <div className={styles.patientImage}>
+                <Image src="/asset/patientshandling2.png" alt="Comfortable dental care experience" fill />
+              </div>
             </div>
           </Reveal>
           <div className={styles.grid}>

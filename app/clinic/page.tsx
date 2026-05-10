@@ -9,9 +9,8 @@ export const metadata = { title: "Clinic | Dr. Mohana's Dental Care" };
 const images = [
   { src: '/asset/infra.jpeg', caption: 'Modern Treatment Room', size: 'wide' },
   { src: '/asset/pate.jpeg', caption: 'Patient Area', size: 'wide' },
-  { src: '/asset/rece.jpeg', caption: 'Reception', size: 'square' },
-  { src: '/asset/drsit.jpeg', caption: 'Consultation Room', size: 'square' },
-  { src: '/asset/outer.jpeg', caption: 'Clinic Exterior', size: 'full' },
+  { src: '/asset/rece.jpeg', caption: 'Consultation Room', size: 'wide' },
+  { src: '/asset/outer.jpeg', caption: 'Clinic Exterior', size: 'wide' },
 ];
 
 const features = [
