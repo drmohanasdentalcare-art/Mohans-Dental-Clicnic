@@ -7,11 +7,11 @@ import Reveal from '../components/Reveal';
 export const metadata = { title: "Clinic | Dr. Mohana's Dental Care" };
 
 const images = [
-  { src: '/asset/infra.jpeg', caption: 'Modern Treatment Room' },
-  { src: '/asset/pate.jpeg', caption: 'Patient Area' },
-  { src: '/asset/rece.jpeg', caption: 'Reception' },
-  { src: '/asset/drsit.jpeg', caption: 'Consultation Room' },
-  { src: '/asset/outer.jpeg', caption: 'Clinic Exterior' },
+  { src: '/asset/infra.jpeg', caption: 'Modern Treatment Room', size: 'wide' },
+  { src: '/asset/pate.jpeg', caption: 'Patient Area', size: 'wide' },
+  { src: '/asset/rece.jpeg', caption: 'Reception', size: 'square' },
+  { src: '/asset/drsit.jpeg', caption: 'Consultation Room', size: 'square' },
+  { src: '/asset/outer.jpeg', caption: 'Clinic Exterior', size: 'full' },
 ];
 
 const features = [
@@ -33,20 +33,36 @@ export default function ClinicPage() {
         </div>
       </div>
       <section className={styles.clinic}>
+        {/* Poetic intro */}
+        <Reveal>
+          <div className={styles.intro}>
+            <p className={styles.introPoem}>
+              Step through our doors into a space where modern science meets genuine warmth.
+              Every corner of our clinic is thoughtfully designed — from the calming ambience of the waiting area
+              to the precision instruments in our treatment rooms — so that your visit feels less like a procedure
+              and more like a step toward lasting well-being.
+            </p>
+          </div>
+        </Reveal>
+
         <Reveal>
           <div className="section-label"><span>Infrastructure</span></div>
           <h2 className="section-title">World-Class <em>Facilities</em></h2>
         </Reveal>
+
+        {/* Bento gallery */}
         <div className={styles.gallery}>
           {images.map((img, i) => (
-            <Reveal key={i}>
+            <Reveal key={i} className={`${styles.galleryCell} ${styles[img.size]}`}>
               <div className={styles.galleryItem}>
-                <Image src={img.src} alt={img.caption} fill style={{ objectFit: 'cover' }} />
+                <Image src={img.src} alt={img.caption} fill style={{ objectFit: 'cover' }} sizes="(max-width: 600px) 100vw, 50vw" />
                 <div className={styles.galleryCaption}><span>{img.caption}</span></div>
               </div>
             </Reveal>
           ))}
         </div>
+
+        {/* Features */}
         <div className={styles.features}>
           {features.map((f, i) => (
             <Reveal key={i}>

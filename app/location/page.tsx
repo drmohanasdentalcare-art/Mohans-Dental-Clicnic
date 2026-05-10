@@ -16,6 +16,17 @@ export default function LocationPage() {
         </div>
       </div>
       <section className={styles.location}>
+        {/* Poetic intro */}
+        <Reveal>
+          <div className={styles.intro}>
+            <p className={styles.introPoem}>
+              Nestled in the heart of the city, our clinic is a sanctuary for your smile.
+              We&apos;ve built a space where clinical excellence meets comforting serenity,
+              ensuring that every visit leaves you feeling cared for, confident, and completely at ease.
+            </p>
+          </div>
+        </Reveal>
+
         <Reveal>
           <div className="section-label"><span>Visit Us</span></div>
           <h2 className="section-title">Our <em>Location</em></h2>

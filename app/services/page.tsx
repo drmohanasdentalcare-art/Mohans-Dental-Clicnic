@@ -18,8 +18,18 @@ export default function ServicesPage() {
       </div>
       <section className={styles.services}>
         <Reveal>
+          <div className={styles.intro}>
+            <p className={styles.introPoem}>
+              A healthy smile is more than beauty — it is confidence, comfort, and care woven together.
+              At Dr. Mohana&apos;s Dental Care, every treatment is a promise: to listen before we heal,
+              to explain before we begin, and to ensure every patient leaves with a smile they truly deserve.
+            </p>
+          </div>
+        </Reveal>
+        <Reveal>
           <div className="section-label"><span>What We Offer</span></div>
           <h2 className="section-title">Dental <em>Services</em></h2>
+          <p className={styles.servicesSub}>From routine care to advanced restorations — comprehensive treatments tailored to your unique needs, all under one roof.</p>
         </Reveal>
         <div className={styles.grid}>
           {services.map((s, i) => (
