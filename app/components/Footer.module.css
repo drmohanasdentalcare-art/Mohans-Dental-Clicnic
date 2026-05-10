@@ -11,7 +11,10 @@
 .col li{padding:6px 0}
 .col a{font-size:13px;font-weight:300;color:rgba(255,255,255,.55);text-decoration:none;transition:color .3s}
 .col a:hover{color:var(--sage-light)}
-.address{font-size:13px;color:rgba(255,255,255,.55);font-weight:300}
+.contactItem{display:flex;align-items:flex-start;gap:10px;padding:6px 0}
+.contactItem svg{width:15px;height:15px;fill:none;stroke:rgba(255,255,255,.35);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+.contactItem a, .contactItem span{font-size:13px;font-weight:300;color:rgba(255,255,255,.55);text-decoration:none;transition:color .3s;line-height:1.6}
+.contactItem a:hover{color:var(--sage-light)}
 .bottom{padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .bottom p{font-size:12px;font-weight:300;color:rgba(255,255,255,.25)}
 .tagline{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:rgba(255,255,255,.3)}
