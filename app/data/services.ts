@@ -65,7 +65,7 @@ export const services: ServiceData[] = [
   {
     name: 'All General Dental Procedures',
     desc: 'Scaling, polishing, fillings, fluoride treatments and routine check-ups — complete general dentistry for the whole family.',
-    images: ['/asset/Cavity Fillings.png','/asset/Scaling & Polishing.png','/asset/Teeth Splinting.jpg'],
+    images: ['/asset/Cavity Fillings.png','/asset/Scaling (Teeth Cleaning  Teeth Whitening).png','/asset/Teeth Splinting.jpg'],
     isGeneral: true,
   },
 ];
