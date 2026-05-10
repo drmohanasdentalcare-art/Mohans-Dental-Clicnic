@@ -1,18 +1,14 @@
 {
-  "rewrites": [
-    { "source": "/googlec9012e0d952070ee.html", "destination": "/googlec9012e0d952070ee.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
+  "framework": "nextjs",
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Robots-Tag", "value": "index, follow" },
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        { "key": "X-Robots-Tag", "value": "index, follow" }
       ]
     },
     {
-      "source": "/assets/(.*)",
+      "source": "/_next/static/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
@@ -22,6 +18,12 @@
       "headers": [
         { "key": "Content-Type", "value": "application/xml" },
         { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain" }
       ]
     }
   ]
