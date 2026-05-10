@@ -1,0 +1,9 @@
+.bookCta{background:var(--charcoal);text-align:center;position:relative;overflow:hidden;padding:var(--section-pad) clamp(20px,6vw,100px)}
+.bookCta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(122,158,126,.12) 0%,transparent 70%)}
+.inner{position:relative;z-index:2}
+.inner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,6vw,72px);font-weight:300;line-height:1.1;color:#fff;letter-spacing:-.01em;margin-bottom:16px}
+.inner h2 em{font-style:italic;color:var(--sage-light)}
+.inner p{font-size:clamp(14px,1.5vw,17px);font-weight:300;color:rgba(255,255,255,.55);max-width:500px;margin:0 auto 36px;line-height:1.8}
+.whatsappLink{display:inline-flex;align-items:center;gap:10px;margin-top:32px;padding:14px 28px;border:1px solid rgba(255,255,255,.15);border-radius:2px;text-decoration:none;transition:all .3s;background:#25D366;border-color:#25D366}
+.whatsappLink:hover{background:#1da15a;border-color:#1da15a}
+.whatsappLink span{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.5vw,24px);font-weight:300;color:#fff}

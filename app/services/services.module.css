@@ -1,0 +1,13 @@
+.services{background:var(--ivory);padding:var(--section-pad) clamp(20px,6vw,100px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;margin-top:clamp(40px,6vw,60px)}
+.card{background:var(--warm-white);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .4s;position:relative}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--sage);transform:scaleX(0);transition:transform .3s;z-index:2;border-radius:16px 16px 0 0}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
+.card:hover::before{transform:scaleX(1)}
+.cardImage{width:100%;background:linear-gradient(135deg,rgba(122,158,126,.08),rgba(245,240,232,.5))}
+.cardContent{padding:clamp(20px,3vw,32px)}
+.cardNum{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.5vw,42px);font-weight:300;color:rgba(122,158,126,.15);position:absolute;top:16px;right:20px;line-height:1;z-index:1}
+.card h3{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.2vw,24px);font-weight:400;margin-bottom:10px;color:var(--charcoal)}
+.card p{font-size:13px;font-weight:300;line-height:1.8;color:var(--mid)}
+.specialCard{border-color:var(--sage);background:linear-gradient(135deg,rgba(122,158,126,.06),rgba(122,158,126,.02))}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}

@@ -1,0 +1,6 @@
+.slider{position:relative;width:100%;aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:var(--warm-white)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease}
+.active{opacity:1}
+.dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);border:none;cursor:pointer;padding:0;transition:all .3s}
+.dotActive{background:#fff;transform:scale(1.2)}

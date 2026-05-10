@@ -1,0 +1,22 @@
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:20px clamp(20px,5vw,80px);transition:all .4s ease}
+.scrolled{background:rgba(250,247,242,.96);backdrop-filter:blur(12px);padding:14px clamp(20px,5vw,80px);box-shadow:0 1px 30px rgba(0,0,0,.06)}
+.navLogo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logoIcon{width:44px;height:44px;border-radius:50%;overflow:hidden;flex-shrink:0}
+.logoText{line-height:1.2}
+.logoText strong{display:block;font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.2vw,22px);font-weight:600;color:var(--charcoal);letter-spacing:.02em}
+.logoText span{font-size:10px;font-weight:300;color:var(--sage);letter-spacing:.15em;text-transform:uppercase}
+.navLinks{display:flex;align-items:center;gap:clamp(20px,3vw,42px);list-style:none}
+.navLinks a{text-decoration:none;font-size:13px;font-weight:400;color:var(--mid);letter-spacing:.08em;text-transform:uppercase;transition:color .3s;position:relative}
+.navLinks a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:1px;background:var(--sage);transform:scaleX(0);transition:transform .3s}
+.navLinks a:hover,.navLinks .active{color:var(--sage)}
+.navLinks a:hover::after,.navLinks .active::after{transform:scaleX(1)}
+.navCta{background:var(--sage);color:#fff!important;padding:10px 24px;border-radius:2px;font-size:12px!important;letter-spacing:.12em!important;text-transform:uppercase;transition:background .3s,transform .2s!important}
+.navCta::after{display:none!important}
+.navCta:hover{background:var(--sage-dark)!important;transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{display:block;width:24px;height:1.5px;background:var(--charcoal);transition:all .3s}
+.mobileMenu{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--ivory);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:36px}
+.mobileMenu a{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:var(--charcoal);text-decoration:none;letter-spacing:.04em;transition:color .3s}
+.mobileMenu a:hover{color:var(--sage)}
+.mobileClose{position:absolute;top:24px;right:clamp(20px,5vw,80px);background:none;border:none;font-size:28px;cursor:pointer;color:var(--charcoal)}
+@media(max-width:900px){.navLinks{display:none}.hamburger{display:flex}}
