@@ -10,6 +10,6 @@
 .info h3{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,32px);font-weight:400;color:var(--charcoal);margin-bottom:16px}
 .info p{font-size:clamp(14px,1.3vw,16px);font-weight:300;line-height:1.8;color:var(--mid);margin-bottom:12px}
 .info a{color:var(--sage);text-decoration:none}
-.reviewLink{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:12px 24px;background:var(--sage);color:#fff;border-radius:2px;font-size:13px;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;transition:background .3s}
-.reviewLink:hover{background:var(--sage-dark)}
+.info a.reviewLink{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:12px 24px;background:var(--sage);color:#fff;border-radius:2px;font-size:13px;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;transition:background .3s}
+.info a.reviewLink:hover{background:var(--sage-dark)}
 @media(max-width:900px){.wrapper{grid-template-columns:1fr}}
