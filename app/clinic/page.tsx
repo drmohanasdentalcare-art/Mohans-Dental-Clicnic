@@ -11,6 +11,7 @@ const images = [
   { src: '/asset/pate.jpeg', caption: 'Patient Area', size: 'wide' },
   { src: '/asset/rece.jpeg', caption: 'Consultation Room', size: 'wide' },
   { src: '/asset/outer.jpeg', caption: 'Clinic Exterior', size: 'wide' },
+  { src: '/asset/reception image.png', caption: 'Reception', size: 'wide' },
 ];
 
 const features = [
