@@ -37,7 +37,7 @@ export default function TestimonialsPage() {
             <div style={{ position: 'relative', zIndex: 3 }}>
               <div className="section-label"><span>Testimonials</span></div>
               <h2 className="section-title">What Our <em>Patients Say</em></h2>
-              <p className={styles.reviewCount}>{reviews.length} verified Google reviews · ⭐ 4.9/5 rating</p>
+              <p>verified Google reviews · ⭐ 4.9/5 rating</p>
             </div>
           </Reveal>
           <Reveal>
