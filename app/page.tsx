@@ -137,8 +137,7 @@ export default function Home() {
         {/* Small gallery strip */}
         <div className={styles.clinicGallery}>
           {[
-            { src: '/asset/rece.jpeg', cap: 'Reception' },
-            { src: '/asset/drsit.jpeg', cap: 'Consultation' },
+            { src: '/asset/rece.jpeg', cap: 'Consultation' },
             { src: '/asset/outer.jpeg', cap: 'Exterior' },
             { src: '/asset/pate.jpeg', cap: 'Patient Area' },
           ].map((img, i) => (
